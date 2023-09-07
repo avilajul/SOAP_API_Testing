@@ -2,7 +2,6 @@
 
 Feature: multiply two integers
   Scenario Outline: check the result of multiplying two integers
-  Scenario: successful outcome
     Given julian entered the calculator page
     When julian sends two positive integers
     |multiplying  |multiplier  |
