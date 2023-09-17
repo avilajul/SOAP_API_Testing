@@ -1,4 +1,6 @@
 # SOAP API Testing
+For the Spanish version, click [aquí](README.md).
+
 Automatización de pruebas con el framework Serenity implementando el patrón Screenplay en Java, 
 Gradle, Cucumber y Junit para probar un servicio SOAP.
 
