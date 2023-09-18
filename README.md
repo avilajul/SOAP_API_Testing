@@ -74,7 +74,7 @@ gradle compileJava
 - Go to the `multiplicationResult` runner and run
 **NOTE:** The generated test report is located in the path `/target/site/serenity/index.html`
 
-## Contribution 🤝
+## Contribution 🤝 
 ️
 If you would like to make a contribution, please follow the steps below:
 
