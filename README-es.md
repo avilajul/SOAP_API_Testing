@@ -22,7 +22,7 @@ Enviar dos números enteros al servicio para obtener el resultado de la multipli
     .
     ├──📂 src
     │  └──🗃️ main
-    │  │    ├──📂️ java                              # Archivos fuente
+    │  │    └──📂️ java                              # Archivos fuente
     │  │            └──📦 com.co.company.certification.soap
     │  │                ├──📦 exceptions            # Excepciones personalizadas
     │  │                ├──📦 models                # Paquete donde se ubican los modelos - Objeto
@@ -74,7 +74,7 @@ gradle compileJava
 
 **NOTA:** El reporte generado de la prueba se encuentra en la ruta `/target/site/serenity/index.html`
 
-## Contribución 🖇️
+## Contribución 🤝
 Si desea hacer una contribución, siga los siguientes pasos:
 
 1. Clona o crea un Fork del proyecto
