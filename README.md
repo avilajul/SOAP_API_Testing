@@ -21,39 +21,41 @@ Send two integers to the service to obtain the result of the multiplication.
 ## Project structure 🗼
 
     .
-    ├── src              
-    │   ├── main                         # Source files 
-    │   │   └── com.co.company.certification.soap
-    │   │       ├── exceptions           # Custom exceptions
-    │   │       │
-    │   │       │
-    │   │       ├── models               # Package where the models are located - Object
-    │   │       │            
-    │   │       │
-    │   │       ├── questions            # Package where classes are stored to obtain data from the service, response from the service, etc.
-    │   │       │   
-    │   │       │                         
-    │   │       ├── tasks                # Package where the tasks that perform the consumption of the service are stored, etc.
-    │   │       │   
-    │   │       │
-    │   │       └── utils                # Utilities developed
-    │   │           ├── constants        # Constants used in the project
-    │   │           └── various          # Various functions used in the project
+    ├──📂 src              
+    │   ├──🗃️ main                             # Source files 
+    │   │   └──📂️️ java
+    │   │       └──📦 com.co.company.certification.soap
+    │   │           ├──📦 exceptions           # Custom exceptions
+    │   │           │
+    │   │           │
+    │   │           ├──📦 models               # Package where the models are located - Object
+    │   │           │            
+    │   │           │
+    │   │           ├──📦 questions            # Package where classes are stored to obtain data from the service, response from the service, etc.
+    │   │           │   
+    │   │           │                         
+    │   │           ├──📦 tasks                # Package where the tasks that perform the consumption of the service are stored, etc.
+    │   │           │   
+    │   │           │
+    │   │           └──📦 utils                # Utilities developed
+    │   │               ├──📦 constants        # Constants used in the project
+    │   │               └──📦 various          # Various functions used in the project
     │   │
     │   │
-    │   ├── test                         # Files for the execution of the tests
-    │   │   ├── com.co.company.certification.soap
-    │   │   │   ├── runners              # Test execution classes
-    │   │   │   │   
-    │   │   │   │
-    │   │   │   └── stepdefinitions      # Classes with the Java method with an expression that links it to one or more Gherkin steps    │   │   │       
-    │   │   │       └── settings         # Settings for StepDefinitions classes
-    │   │   │    
-    │   │   └── resources
-    │   │       ├── features             # Package where the scenarios are stored in Gherkin language
-    │   │       │   
-    │   │       │
-    │   │       └── requests              # Package where xml file is stored with the request of the SOAP service
+    │   ├──🗃️ test                             # Files for the execution of the tests
+    │   │   └──📂 java 
+    │   │       ├──📦 com.co.company.certification.soap
+    │   │       │   ├──📦 runners              # Test execution classes
+    │   │       │   │   
+    │   │       │   │
+    │   │       │   └──📦 stepdefinitions      # Classes with the Java method with an expression that links it to one or more Gherkin steps    │   │   │       
+    │   │       │       └──📦 settings         # Settings for StepDefinitions classes
+    │   │       │    
+    │   │       └──🗂️ resources
+    │   │           ├──📂 features             # Package where the scenarios are stored in Gherkin language
+    │   │           │   
+    │   │           │
+    │   │           └──📂 requests             # Package where xml file is stored with the request of the SOAP service
     │   │           
     │   └── ···
     │

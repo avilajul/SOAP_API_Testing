@@ -20,39 +20,41 @@ Enviar dos números enteros al servicio para obtener el resultado de la multipli
 ## Estructura del proyecto 🗼
 
     .
-    ├── src
-    │   ├── principal                     # Archivos fuente
-    │   │   └── com.co.company.certification.soap
-    │   │       ├── exceptions            # Excepciones personalizadas
-    │   │       ├── models                # Paquete donde se ubican los modelos - Objeto
-    │   │       │    
-    │   │       │
-    │   │       ├── questions             # Paquete donde se almacenan las clases para obtener datos del servicio, respuesta del servicio, etc.
-    │   │       │   
-    │   │       │
-    │   │       ├── tasks                 # Paquete donde se almacenan las tareas que realizan el consumo del servicio, etc.    │   │       │   
-    │   │       │   
-    │   │       │
-    │   │       └── utils                 # Utilidades desarrolladas
-    │   │           ├── constants         # Constantes que se utilizan en el proyecto
-    │   │           └── various           # Funciones varias que se utilizan en el proyecto
-    │   │
-    │   │ 
-    │   ├── test                          # Archivos para la ejecución de las pruebas
-    │   │   ├── com.co.company.certification.soap
-    │   │   │   ├── runners               # Clases de ejecución de pruebas
-    │   │   │   │   
-    │   │   │   │
-    │   │   │   └── stepdefinitions       # Clases con el método Java con una expresión que lo vincula a uno o más pasos de Gherkin
-    │   │   │   
-    │   │   │
-    │   │   └── resources
-    │   │       ├── features              # Paquete donde se almacenan los escenarios en lenguaje Gherkin
-    │   │       │   
-    │   │       │
-    │   │       └── requests              # Paquete donde se almacena el archivo xml con la solicitud de servicio
-    │   │           
-    │   └── ···
+    ├──📂 src
+    │  └──🗃️ main
+    │  │    ├──📂️ java                              # Archivos fuente
+    │  │            └──📦 com.co.company.certification.soap
+    │  │                ├──📦 exceptions            # Excepciones personalizadas
+    │  │                ├──📦 models                # Paquete donde se ubican los modelos - Objeto
+    │  │                │    
+    │  │                │
+    │  │                ├──📦 questions             # Paquete donde se almacenan las clases para obtener datos del servicio, respuesta del servicio, etc.
+    │  │                │   
+    │  │                │
+    │  │                ├──📦 tasks                 # Paquete donde se almacenan las tareas que realizan el consumo del servicio, etc.    │   │       │   
+    │  │                │   
+    │  │                │
+    │  │                └──📦 utils                 # Utilidades desarrolladas
+    │  │                    ├──📦 constants         # Constantes que se utilizan en el proyecto
+    │  │                    └──📦 various           # Funciones varias que se utilizan en el proyecto
+    │  │     
+    │  │      
+    │  ├──🗃️ test                                   # Archivos para la ejecución de las pruebas
+    │  │   ├──📂️ java
+    │  │   │   ├──📦 com.co.company.certification.soap
+    │  │   │   ├──📦 runners                        # Clases de ejecución de pruebas
+    │  │   │   │   
+    │  │   │   │
+    │  │   │   └──📦 stepdefinitions                # Clases con el método Java con una expresión que lo vincula a uno o más pasos de Gherkin
+    │  │   │       └──📦 settings
+    │  │   │
+    │  │   └──🗂️ resources
+    │  │       ├──📂️ features                       # Paquete donde se almacenan los escenarios en lenguaje Gherkin
+    │  │       │   
+    │  │       │
+    │  │       └──📂️ requests                       # Paquete donde se almacena el archivo xml con la solicitud de servicio
+    │  │           
+    │  └── ···
     │
     └── ···
 
