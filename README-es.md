@@ -4,7 +4,7 @@ For the English version, click [here](README.md).
 Automatización de pruebas con el framework Serenity implementando el patrón Screenplay en Java, 
 Gradle, Cucumber y Junit para probar un servicio SOAP.
 
-La API SOAP pública que se utilizó para la automatización.
+API SOAP pública utilizada para la automatización 
 [http://www.dneonline.com/calculator.asmx](http://www.dneonline.com/calculator.asmx)
 
 Para la automatización se usó la API SOAP pública [http://www.dneonline.com/calculator.asmx](http://www.dneonline.com/calculator.asmx)
