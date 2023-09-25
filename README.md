@@ -4,10 +4,8 @@ Para la versión en Español, haz clic [aquí](README-es.md).
 Test automation with the Serenity framework implementing the Screenplay pattern in Java, 
 Gradle, Cucumber and Junit to test a SOAP service.
 
-The public SOAP API was used for automation
+Public SOAP API used for automation
 [http://www.dneonline.com/calculator.asmx](http://www.dneonline.com/calculator.asmx)
-
-Para la automatización se usó la API SOAP pública [http://www.dneonline.com/calculator.asmx](http://www.dneonline.com/calculator.asmx) 
 
 ### Built tests 📋
 Send two integers to the service to obtain the result of the multiplication.
