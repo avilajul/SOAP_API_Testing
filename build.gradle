@@ -5,6 +5,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: "org.sonarqube"
 
 repositories {
     mavenCentral()
@@ -15,15 +16,28 @@ buildscript {
     repositories {
         mavenCentral()
         mavenLocal()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.89")
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:4.4.1.3373"
     }
 }
+
 
 ext {
     serenityVersion= '2.0.90'
     serenityCucumberVersion = '1.9.49'
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "avilajul_SOAP_API_Testing"
+        property "sonar.organization", "avilajul"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
 
 dependencies {
