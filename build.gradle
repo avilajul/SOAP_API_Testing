@@ -37,6 +37,7 @@ sonar {
         property "sonar.projectKey", "avilajul_SOAP_API_Testing"
         property "sonar.organization", "avilajul"
         property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.gradle.skipCompile", true
     }
 }
 
