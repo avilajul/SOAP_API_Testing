@@ -1,11 +1,11 @@
 package co.com.company.certification.soap.utils.various;
 
-import co.com.company.certification.soap.exceptions.FileHandlingExceptions;
 import co.com.company.certification.soap.models.NumbersData;
 import co.com.company.certification.soap.models.Routes;
 import com.google.common.io.Files;
 import kotlin.text.Charsets;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 
@@ -13,7 +13,7 @@ import static co.com.company.certification.soap.utils.constants.Constants.NUMBER
 import static co.com.company.certification.soap.utils.constants.Constants.NUMBER_INT_B;
 
 public class RequestBody {
-    private static final Logger LOGGER = Logger.getLogger(RequestBody.class);
+    private static final Logger LOGGER = LogManager.getLogger();
     private RequestBody() {
     }
         public static String multipliesTwoIntegers(NumbersData numbersData){
