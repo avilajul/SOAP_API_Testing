@@ -2,7 +2,7 @@ on:
   workflow_call:
 
 jobs:
-  Gradlew build:
+  build:
     runs-on: ubuntu-latest
 
     steps:
