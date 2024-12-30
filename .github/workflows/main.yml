@@ -6,15 +6,16 @@ on:
       - feature/*
       - main
   pull_request:
+    types: [opened, synchronize, reopened]
     branches:
       - main
   workflow_dispatch:
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
+  Gradlew build:
+    uses: ./.github/workflows/gradlew_build.yml
     secrets: inherit
 
-  analyze:
-    uses: ./.github/workflows/analyze.yml
+  Run Code Analysis:
+    uses: ./.github/workflows/code_analyzer.yml
     secrets: inherit

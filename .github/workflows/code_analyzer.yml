@@ -2,7 +2,7 @@ on:
   workflow_call:
 
 jobs:
-  analyze:
+  Run Code Analysis:
     name: Prepare and Analyze with SonarQube
     runs-on: ubuntu-latest
     steps:
