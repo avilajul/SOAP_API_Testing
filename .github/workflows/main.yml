@@ -20,3 +20,8 @@ jobs:
     uses: ./.github/workflows/code_analyzer.yml
     secrets: inherit
     needs: [build]
+
+  quality_gate:
+    uses: ./.github/workflows/quality_gate_check.yml
+    secrets: inherit
+    needs: [build, sonarqube]
