@@ -3,48 +3,21 @@ on:
 
 jobs:
   quality_gate:
+    name: Check SonarCloud Quality Gate Status
     runs-on: ubuntu-latest
+    needs: sonarqube
     steps:
-      - uses: actions/checkout@v4
-        with:
-          # Disabling shallow clone is recommended for improving relevancy of reporting.
-          fetch-depth: 0
-
-      - name: Listar
-        run:  |
-          echo "ver ruta actual"
-          pwd
-          echo "Listar ls -a"
-          ls -la
-
-      # Triggering SonarQube analysis as results of it are required by Quality Gate check.
-      - name: SonarQube Server Scan
-        uses: sonarsource/sonarqube-scan-action@master
+      - name: Check SonarCloud Quality Gate Status
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-      # Check the Quality Gate status.
-      - name: SonarQube Server Quality Gate check
-        id: sonarqube-quality-gate-check
-        uses: sonarsource/sonarqube-quality-gate-action@master
-        with:
-          pollingTimeoutSec: 600
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-      # Optionally you can use the output from the Quality Gate in another step.
-      # The possible outputs of the `quality-gate-status` variable are `PASSED`, `WARN` or `FAILED`.
-      - name: "Example show SonarQube Server Quality Gate Status value"
-        run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"
-
-      - name: Clear cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.sonar/cache
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-sonar-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-sonar
-            ${{ runner.os }}-gradle
+        run: |
+          PROJECT_KEY=<your_project_key> # Replace with your SonarCloud project key
+          QUALITY_GATE_STATUS=$(curl -s -u $SONAR_TOKEN: \
+            "https://sonarcloud.io/api/qualitygates/project_status?projectKey=$PROJECT_KEY" \
+            | jq -r '.projectStatus.status')
+          
+          echo "Quality Gate Status: $QUALITY_GATE_STATUS"
+          if [ "$QUALITY_GATE_STATUS" != "OK" ]; then
+            echo "Quality Gate failed!"
+            exit 1
+          fi
