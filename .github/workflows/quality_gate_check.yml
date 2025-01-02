@@ -18,7 +18,7 @@ jobs:
           ls -a
           
           echo "ver archivos binarios"
-          cd build/classes/main/co/com/company/certification/soap/tasks
+          cd build
           ls -a
 
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
