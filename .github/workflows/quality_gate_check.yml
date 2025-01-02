@@ -1,5 +1,6 @@
 on:
-  workflow_call:
+  repository_dispatch:
+    types: [ quality_gate_check ]
 
 jobs:
   quality_gate:
