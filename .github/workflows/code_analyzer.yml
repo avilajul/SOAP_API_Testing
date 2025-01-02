@@ -38,4 +38,3 @@ jobs:
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       run: | 
         ./gradlew build sonar --info
-        sonar-scanner -Dsonar.java.binaries=build/classes/java/main
