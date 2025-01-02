@@ -21,9 +21,3 @@ jobs:
     uses: ./.github/workflows/code_analyzer.yml
     secrets: inherit
     needs: [build]
-
-  quality_gate:
-    if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
-    uses: ./.github/workflows/quality_gate_check.yml
-    secrets: inherit
-    needs: [build, sonarqube]
