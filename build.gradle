@@ -70,11 +70,6 @@ dependencies {
     testImplementation "org.assertj:assertj-core:${assertj_core_version}"
 }
 
-sourceSets {
-    main {
-        output.classesDirs = files('build/classes')
-    }
-}
 
 test {
     systemProperties System.getProperties()

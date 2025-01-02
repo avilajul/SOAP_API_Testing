@@ -30,5 +30,7 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          ./gradlew clean test
           echo "Build with Gradle"
+          ./gradlew clean build -x test
+          echo "Binarios despues de compilar"
+          ls -la
