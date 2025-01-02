@@ -9,19 +9,20 @@ jobs:
         with:
           # Disabling shallow clone is recommended for improving relevancy of reporting.
           fetch-depth: 0
-          run: |
-            echo "ver archivos binarios"
-            pwd
-            cd /home/runner/work/SOAP_API_Testing/SOAP_API_Testing
-            ls -a
-            
-
 
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Server Scan
         uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: Listar
+        run:  |
+          echo "ver ruta actual"
+          pwd
+          echo "ver archivos binarios"
+          cd /home/runner/work/SOAP_API_Testing/SOAP_API_Testing/build/classes/main/co/com/company/certification/soap/tasks
+          ls -a
 
       # Check the Quality Gate status.
       - name: SonarQube Server Quality Gate check
