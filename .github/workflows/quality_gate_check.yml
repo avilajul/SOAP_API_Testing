@@ -14,10 +14,13 @@ jobs:
         run:  |
           echo "ver ruta actual"
           pwd
-          echo "ver archivos binarios"
-          cd /home/runner/work/SOAP_API_Testing/SOAP_API_Testing/build/classes/main/co/com/company/certification/soap/tasks
+          echo "Listar ls -a"
           ls -a
           
+          echo "ver archivos binarios"
+          cd build/classes/main/co/com/company/certification/soap/tasks
+          ls -a
+
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Server Scan
         uses: sonarsource/sonarqube-scan-action@master
