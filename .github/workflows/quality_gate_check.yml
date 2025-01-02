@@ -1,6 +1,6 @@
 on:
   repository_dispatch:
-    types: [ quality_gate_check ]
+    types: [ quality_gate ]
 
 jobs:
   quality_gate:
