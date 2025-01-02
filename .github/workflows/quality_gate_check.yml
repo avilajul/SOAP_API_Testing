@@ -15,11 +15,7 @@ jobs:
           echo "ver ruta actual"
           pwd
           echo "Listar ls -a"
-          ls -a
-          
-          echo "ver archivos binarios"
-          cd build
-          ls -a
+          ls -la
 
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Server Scan
