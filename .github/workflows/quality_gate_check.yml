@@ -23,8 +23,6 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-
-
       # Check the Quality Gate status.
       - name: SonarQube Server Quality Gate check
         id: sonarqube-quality-gate-check
@@ -38,5 +36,15 @@ jobs:
       # The possible outputs of the `quality-gate-status` variable are `PASSED`, `WARN` or `FAILED`.
       - name: "Example show SonarQube Server Quality Gate Status value"
         run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"
+
+      - name: Clear cache
+        uses: actions/cache@v3
         with:
-          restore-keys: ${{ runner.os }}-sonar ${{ runner.os }}-gradle
+          path: |
+            ~/.sonar/cache
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-sonar-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-sonar
+            ${{ runner.os }}-gradle
