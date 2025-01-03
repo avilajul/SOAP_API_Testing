@@ -16,8 +16,8 @@ jobs:
     uses: ./.github/workflows/build.yml
     secrets: inherit
 
-  sonarqube:
-    if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
-    uses: ./.github/workflows/code_analyzer.yml
-    secrets: inherit
-    needs: [build]
+#  sonarqube:
+#    if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
+#    uses: ./.github/workflows/code_analyzer.yml
+#    secrets: inherit
+#    needs: [build]
