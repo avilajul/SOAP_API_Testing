@@ -10,8 +10,8 @@ import java.util.Map;
 
 @Generated("jsonschemapojo2")
 public class NumbersData {
-    private String multiplying;
-    private String multiplier;
+    private String number1;
+    private String number2;
     private int multiplyResult;
     private int result;
 
@@ -24,20 +24,20 @@ public class NumbersData {
         return data;
     }
 
-    public String getMultiplying() {
-        return multiplying;
+    public String getNumber1() {
+        return number1;
     }
 
-    public void setMultiplying(String multiplying) {
-        this.multiplying = multiplying;
+    public void setNumber1(String number1) {
+        this.number1 = number1;
     }
 
-    public String getMultiplier() {
-        return multiplier;
+    public String getNumber2() {
+        return number2;
     }
 
-    public void setMultiplier(String multiplier) {
-        this.multiplier = multiplier;
+    public void setNumber2(String number2) {
+        this.number2 = number2;
     }
 
     public int getMultiplyResult() {

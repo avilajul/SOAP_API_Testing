@@ -8,8 +8,8 @@ public class Constants {
     public static final  String TEXT_XML_CHARSET_UTF_8 = "text/xml; charset=utf-8";
     public static final String SOAPACTION = "SOAPAction";
     public static final  String SOAP_URL = "http://tempuri.org/Multiply";
-    public static final String NUMBER_INT_A = "$multiplicand";
-    public static final String NUMBER_INT_B = "$multiplier";
+    public static final String NUMBER_INT_A = "$number1";
+    public static final String NUMBER_INT_B = "$number2";
     private Constants(){
         throw new IllegalStateException("Utility class");
     }

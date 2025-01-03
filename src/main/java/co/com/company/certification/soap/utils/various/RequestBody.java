@@ -17,17 +17,31 @@ public class RequestBody {
     private static final Logger LOGGER = LogManager.getLogger();
     private RequestBody() {
     }
-        public static String multipliesTwoIntegers(NumbersData numbersData){
-        String pathXml = Routes.valueOf("MULTIPLICATION_REQUEST_BODY").getRouteFile();
+        public static String calculator(NumbersData numbersData, String mathematicalOperation){
+        String pathXml = Routes.valueOf(chooseOperation(mathematicalOperation)).getRouteFile();
         String xmlBody;
         try{
             xmlBody = Files.asCharSource(new File(pathXml), Charsets.UTF_8).read();
-            xmlBody = xmlBody.replace(NUMBER_INT_A, numbersData.getMultiplying())
-                    .replace(NUMBER_INT_B, numbersData.getMultiplier());
+            xmlBody = xmlBody.replace(NUMBER_INT_A, numbersData.getNumber1())
+                    .replace(NUMBER_INT_B, numbersData.getNumber2());
         } catch(Exception e){
             LOGGER.error(e);
             throw new FileHandlingExceptions();
         }
         return xmlBody;
+    }
+    private static String chooseOperation(String mathematicalOperation ){
+        String routeName;
+        switch (mathematicalOperation) {
+            case "Addition":
+                routeName = "ADDITION_REQUEST_BODY";
+                break;
+            case "Multiplication":
+                routeName = "MULTIPLICATION_REQUEST_BODY";
+                break;
+            default:
+                routeName = "";
+        }
+        return routeName;
     }
 }
